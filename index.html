@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<style>
+p1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<SCRIPT>
+var oglink = window.prompt("Enter amazon.co.uk link: ");
+
+var a = oglink;
+var s = a;
+s = s.substring(0, s.indexOf('ref='));
+var f = s.replace(/[\D]/g, '');
+
+let text = oglink;
+let result = text.link(oglink); 
+document.write("<p1><center>You inputted the amazon.co.uk link <i>" + result + "</i>.</center></p1></br>");
+
+document.write("<p1><center>The ISBN of this book is " + "<b>" + f + "</b>.</center></p1></br>");
+let h = "<p1><i>booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "</i></p1>";
+
+document.write("<p1><center>Compare prices for this book at <a href='https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "'>" + h + "</a></center></p1>");
+
+</SCRIPT>
+</BODY>
+</FORM>
+</HTML>
