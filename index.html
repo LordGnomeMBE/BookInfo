@@ -1,12 +1,29 @@
 <HTML>
-<HEAD>
+<head>
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/LordGnomeMBE/AmazonBookAlternatives/main/deAmazonator%20icon.png">
+  <title>deAMAZONator by Lord Gnome | find an amazon alternative for your books!</title>
+</head>
 <style>
 p1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 </style>
+ <h1 style="font-size:18px"style="font-family:verdana;"><label id="text"style="color:black;"><center>
+ʙʏ <a href="https://www.reddit.com/user/lordgnomembe">ʟᴏʀᴅ ɢɴᴏᴍᴇ</a> | ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴛʜɪs sɪᴛᴇ, ᴘʟᴇᴀsᴇ sʜᴀʀᴇ ɪᴛ! | <a href="https://github.com/LordGnomeMBE/AmazonBookAlternatives">ᴠɪᴇᴡ ᴛʜᴇ sɪᴛᴇ sᴏᴜʀᴄᴇ</a></a></p></center></label></h1>
+
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+
+<center><img src="https://raw.githubusercontent.com/LordGnomeMBE/AmazonBookAlternatives/main/deAmazonator%20icon.png" width="100" height="80"></center>
+<p1><center><b style = "font-size: 35px;">de<i style = "color: darkorange;font-size: 55px;">amazon</i>ator</b></center></p1>
+<p1><center><i>Easily find a place to buy a book that isn't amazon!</i></center></p1>
+
+</br>
+
+<hr style="height:2px;border-width:0;color:black;background-color:black">
 <SCRIPT>
-var oglink = window.prompt("Enter amazon.co.uk link: ");
+var oglink = window.prompt("Enter amazon link: ");
 
 var a = oglink;
 var s = a;
@@ -15,14 +32,24 @@ var f = s.replace(/[\D]/g, '');
 
 let text = oglink;
 let result = text.link(oglink); 
-document.write("<p1><center>You inputted the amazon.co.uk link <i>" + result + "</i>.</center></p1></br>");
+document.write("<p1><center>You submitted the amazon link <i>" + result + "</i>.</center></p1></br>");
 
 document.write("<p1><center>The ISBN of this book is " + "<b>" + f + "</b>.</center></p1></br>");
 let h = "<p1><i>booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "</i></p1>";
 
-document.write("<p1><center>Compare prices for this book at <a href='https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "'>" + h + "</a></center></p1>");
+document.write("<p1><center>Compare prices for this book at <a href='https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "'>" + h + "</a></center></p1></br>");
 
 </SCRIPT>
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+
+<p1><center>There are many reasons not to buy things from amazon, from ethical issues to them not actually being the cheapest option. I built this site to make it easy to find an alternative.</center></p1></br>
+<p1><center><b>Important Notes - please read before continuing</b></center></p1></br>
+<p1><center>This site does work, but i'm still developing it. Please be patient if it doesn't work for some reason.</center></p1></br>
+<p1><center>As booksprice.co.uk does not have https, the first time you click the comparison link, your browser will warn you that it's not secure. Once you've gone past this, it should not appear again.</center></p1>
+<p1><center>Currently the site only works for links that contain the <i>amazon.co.uk/Title-Of-Book/dp/83290582305/<b>ref=trackers-from-search-or-wherever-you-arrived-from</b></i> part. It doesn't work with clean URLs.</center></p1></br>
+<p1><center>If you need to input a new URL, reload the page.</center></p1></br>
+<p1><center>I'm very much an amateur - I never studied computing beyond Year 9 (non Brits, you can look it up). I built this to practice and I update it in my free time. If anyone with more skills than me has any improvements, please contact me.</center></p1>
+
 </BODY>
 </FORM>
 </HTML>
