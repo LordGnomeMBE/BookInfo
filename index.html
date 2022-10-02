@@ -1,59 +1,87 @@
-<HTML>
+<!DOCTYPE html>
+<html>
 <head>
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/LordGnomeMBE/AmazonBookAlternatives/main/deAmazonator%20icon.png">
-  <title>deAMAZONator by Lord Gnome | find an amazon alternative for your books!</title>
+  <title>deAMAZONator by Lord Gnome | Find a non-amazon place to buy your books!</title>
 </head>
 <style>
+.info {
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
 p1 {
   font-family: Arial, Helvetica, sans-serif;
 }
+.button1 {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 </style>
- <h1 style="font-size:18px"style="font-family:verdana;"><label id="text"style="color:black;"><center>
-ʙʏ <a href="https://www.reddit.com/user/lordgnomembe">ʟᴏʀᴅ ɢɴᴏᴍᴇ</a> | ɪғ ʏᴏᴜ ʟɪᴋᴇ ᴛʜɪs sɪᴛᴇ, ᴘʟᴇᴀsᴇ sʜᴀʀᴇ ɪᴛ! | <a href="https://github.com/LordGnomeMBE/AmazonBookAlternatives">ᴠɪᴇᴡ ᴛʜᴇ sɪᴛᴇ sᴏᴜʀᴄᴇ</a></a></p></center></label></h1>
+<body>
 
-<hr style="height:2px;border-width:0;color:black;background-color:black">
+<p1 style="font-size:18px"style="font-family:verdana;"><label id="text"style="color:black;"><center>
+By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you like this site, please share it! | <a href="https://github.com/LordGnomeMBE/AmazonBookAlternatives">View the site source</a></a></p></center></label></p1>
 
 <hr style="height:2px;border-width:0;color:black;background-color:black">
 
 <center><img src="https://raw.githubusercontent.com/LordGnomeMBE/AmazonBookAlternatives/main/deAmazonator%20icon.png" width="100" height="80"></center>
 <p1><center><b style = "font-size: 35px;">de<i style = "color: darkorange;font-size: 55px;">amazon</i>ator</b></center></p1>
-<p1><center><i>Easily find a place to buy a book that isn't amazon!</i></center></p1>
-
-</br>
-
-<hr style="height:2px;border-width:0;color:black;background-color:black">
-<SCRIPT>
-var oglink = window.prompt("Enter amazon link: ");
-
-var a = oglink;
-var s = a;
-s = s.substring(0, s.indexOf('ref='));
-var f = s.replace(/[\D]/g, '');
-
-let text = oglink;
-let result = text.link(oglink); 
-document.write("<p1><center>You submitted the amazon link <i>" + result + "</i>.</center></p1></br>");
-
-document.write("<p1><center>The ISBN of this book is " + "<b>" + f + "</b>.</center></p1></br>");
-let h = "<p1><i>booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "</i></p1>";
-
-document.write("<p1><center>Compare prices for this book at <a href='https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f + "'>" + h + "</a></center></p1></br>");
-
-</SCRIPT>
-<hr style="height:2px;border-width:0;color:black;background-color:black">
+<p1><center><i>Find a non-amazon place to buy your books!</i></center></p1></br>
 
 <p1><center>There are many reasons not to buy things from amazon, from ethical issues to them not actually being the cheapest option. I built this site to make it easy to find an alternative.</center></p1></br>
-<p1><center><b>Important Notes - please read before continuing</b></center></p1></br>
-<p1><center>This site does work, but I'm still developing it. Please be patient if it doesn't work for some reason.</center></p1></br>
-<p1><center>As booksprice.co.uk does not have https, the first time you click the comparison link, your browser will warn you that it's not secure. Once you've gone past this, it should not appear again.</center></p1>
-<p1><center>Currently the site only works for links that contain the <i>amazon.co.uk/Title-Of-Book/dp/83290582305/<b>ref=trackers-from-search-or-wherever-you-arrived-from</b></i> part. It doesn't work with clean URLs.</center></p1></br>
-<p1><center>If you need to input a new URL, reload the page.</center></p1></br>
-<p1><center>I'm very much an amateur - I never studied computing beyond Year 9 (non Brits, you can look it up). I built this to practice and I update it in my free time. If anyone with more skills than me has any improvements, please contact me.</center></p1></br>
-<p1><center><b>If you run into problems</b></center></p1></br>
-<p1><center>Make sure the link is for a physical book, not an eBook or even not a book at all.</center></p1>
-<p1><center>Check the URL includes the <i>ref=</i> part.</center></p1></br>
-<p1><center>Check you've typed the URL correctly.</center></p1>
 
-</BODY>
-</FORM>
-</HTML>
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+</br>
+
+<center>
+<button class="button button1" onclick="firstFunction()">Convert a URL</button></br></br>
+<p1>You entered the amazon link <p1 id="inputform"></p1>.</p1></br></br>
+<p1>The ISBN of this book is <b><p1 id="demo"></p1></b>.</p1></br></br>
+<p1>Compare prices for this book at <i><p1 id="demo2"></p1></i>.</p1></br></br>
+</center>
+
+<script>
+function firstFunction() {
+const input = prompt("Please enter an amazon link:");
+let inputlink;
+if (input.includes("https://")) {
+  inputlink = "<a href=" + input + "><i>" + input + "</i></a>";
+} else if (input.includes("ref=")) {
+  inputlink = "<a href=https://" + input + "><i>" + input + "</i></a>";
+} else {
+  inputlink = "<a href=https://" + input + "/ref=reference><i>" + input + "</i></a>";
+}
+var a = inputlink;
+document.getElementById("inputform").innerHTML = a;
+var s = input + "ref=12345";
+s = s.substring(0, s.indexOf('ref='));
+var f = s.replace(/[\D]/g, '');
+document.getElementById("demo").innerHTML = f;
+var g = "https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f;
+var h = "<a href='" + g + "'>" + g + "</a>";
+document.getElementById("demo2").innerHTML = h;
+}
+</script>
+<center>
+<div class="info">
+  <p1 style="color:black"><b>Important Information - please read before continuing</b></br>As booksprice.co.uk does not have https, the first time you click the comparison link, your browser will warn you that it's not secure. Once you've gone past this, it should not appear again.</p1>
+</center>
+</br>
+<p1><b><center>Troubleshooting</center></b></p1>
+</br>
+<p1><center>Make sure the link is for a physical book, not an eBook or even not a book at all.</center></p1>
+</br>
+<p1><center>Check you've typed or pasted the URL correctly.</center></p1>
+</body>
+</html>
