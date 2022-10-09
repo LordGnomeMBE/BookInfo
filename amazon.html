@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button2 {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+th, td {
+  border: 3px solid black;
+  padding: 5px;
+}
+table {
+  border-spacing: 7px;
+}
+p1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: orange;
+}
+.mtopDiv {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<p1 style="font-size:18px"style="font-family:verdana;"><label id="text"style="color:black;"><center>
+By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you like this site, please share it! | <a href="https://github.com/LordGnomeMBE/AmazonBookAlternatives">View the site source</a></a></p></center></label></p1>
+
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+</br>
+
+<div class="mtopDiv">
+<p2 style="font-size:20px"><b><i>AMAZON </i></b></p2><p1 style="font-size:20px"><b><i>LINK</i></b></p1></br>
+<p1 style="font-size:60px"><b>Book<i>Info</i></b></p1>
+</div>
+</br><center>
+<a href="#" class="button2">Search from ISBN</a>
+<a href="#" class="button2">Search from Amazon Link</a>
+</center>
+</br>
+<hr style="height:2px;border-width:0;color:black;background-color:black"></br>
+<center>
+<button style="font-size:20px" class="button button1" onclick="firstFunction()">Convert a URL</button></br></br>
+
+<p1><i>Please note that not all links will work all the time as book avaliability changes regularly.</i></p1>
+</br></br>
+</center>
+
+<script>
+function firstFunction() {
+const input = prompt("Please enter an amazon link:");
+let inputlink;
+if (input.includes("https://")) {
+  inputlink = "<a href=" + input + "><i>" + input + "</i></a>";
+} else if (input.includes("ref=")) {
+  inputlink = "<a href=https://" + input + "><i>" + input + "</i></a>";
+} else {
+  inputlink = "<a href=https://" + input + "/ref=reference><i>" + input + "</i></a>";
+}
+var a = inputlink;
+document.getElementById("inputform").innerHTML = a;
+var s = input + "ref=12345";
+s = s.substring(0, s.indexOf('ref='));
+var f = s.replace(/[\D]/g, '');
+document.getElementById("demo").innerHTML = f;
+var g = "https://booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f;
+var h = "<a href='" + g + "'>" + g + "</a>";
+document.getElementById("demo2").innerHTML = h;
+var k = "openlibrary.org/isbn/" + f;
+var j = "<a href='https://" + k + "'>" + k + "</a>";
+document.getElementById("demo3").innerHTML = j;
+var oplib = "<a href='https://" + k + "'><i>View full details on OpenLibrary.org</i></a>";
+document.getElementById("demo4").innerHTML = oplib;
+var p = "ebay.co.uk/sch/" + f;
+var ebaylink = "<a href='https://" + p + "'>" + p + "</a>";
+document.getElementById("demo5").innerHTML = ebaylink;
+}
+</script>
+
+<center>
+<table style="width:80%">
+  <tr>
+    <th rowspan="4"><p1>About This Book</p1></br></br><p1>ISBN:  </p1><p1 style = "font-weight: normal"><p1 id="demo"></p1></p1></br></br><p1>Original URL: </p1><p1 style = "font-weight: normal"><p1 id="inputform"></p1></p1></br></br><p1 style = "font-weight: normal"><i><p1 id="demo4"></p1></i></p1><center></div></center></th>
+    <td style="width:50px"><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Open_Library_tight_logo.svg/1065px-Open_Library_tight_logo.svg.png" width="50" height="31"></center></td>
+    <td style="width:54%"><p1><b>Borrow online from OpenLibrary</b></br><p1 id="demo3"></p1></p1></td>
+  </tr>
+  <tr>
+    <td><center><img src="https://simg.nicepng.com/png/small/389-3892236_ebay-logo-new-ebay-by-todd-alexander.png" width="40" height="40"></center></td>
+    <td><p1><b>Buy on eBay</b></br><p1 id="demo5"></p1></p1></td>
+  </tr>
+  <tr>
+    <td><center><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHpFw4SQR0ATQ/company-logo_200_200/0/1599886662996?e=2147483647&v=beta&t=__Vh8lL_YPesfcun993ha_g1TBf9vJ-1RfPAZ-L9IQ4" width="40" height="40"></center></td>
+    <td><p1><b>Buy on bookshop.org</b></br><a href="https://bookshop.org">bookshop.org</a></p1></td>
+  </tr>
+      <td><center><img src="https://raw.githubusercontent.com/LordGnomeMBE/AmazonBookAlternatives/main/index.png" width="50" height="40"></center></td>
+    <td><p1><b>Compare prices on Booksprice.co.uk</b></br><p1 style="color:red;"><i>Please note this site has not renewed its SSL certificate.</i></p1></br><p1 id="demo2"></p1></p1></td>
+  </tr>
+</table>
+</center>
+
+</body>
+</html>
