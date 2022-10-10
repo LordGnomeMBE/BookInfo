@@ -5,6 +5,8 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
+- <b>V2.3.1</b> <i>Minor output URL tweak</i>
+   - changed eBay output to default to 'Lowest Price + P&P'.
 - <b>V2.3.0</b> <i>Previous changes go live - this update brings together all the previous gradual changes to have a new design, name, and input methods!</i> </br>
    - Cleaned up the design
    - Added ISBN input method
