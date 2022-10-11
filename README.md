@@ -5,7 +5,7 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
-- \+ 2 minor changes
+- \+ 3 minor changes
 - <b>V2.4.0</b> <i>Integrated OpenLibrary Covers Library</i>
    - added minor code to implement cover image of book.
 - \+ 1 minor change
@@ -29,6 +29,10 @@ A - I'd love your help! Whether it's by designing a new UI, icons, a logo, or so
 # Contact Me
 Contact me on Reddit (u/LordGnomeMBE) or by email lordgnomembe@gmail.com!
 # Full Changelog
+- <b>V2.4.2</b> <i>Added placeholder output text</i>
+   - Tweaked button CSS on index.html
+   - Tweaked button CSS on amazon.html
+   - Tweaked button CSS on isbn.html
 - <b>V2.4.2</b> <i>Added placeholder output text</i>
    - added a placeholder to replace with output.
 - <b>V2.4.1</b> <i>Minor CSS tweak to Convert Button</i>
