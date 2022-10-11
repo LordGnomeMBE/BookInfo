@@ -89,13 +89,15 @@ var p = "ebay.co.uk/sch/" + f;
 var ebl = p + "&_sop=15";
 var ebaylink = "<a href='https://" + ebl + "'>" + p + "</a>";
 document.getElementById("demo5").innerHTML = ebaylink;
+var imagelink = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' />";
+document.getElementById("imagecover").innerHTML = imagelink;
 }
 </script>
 
 <center>
 <table style="width:80%">
   <tr>
-    <th rowspan="4"><p1>About This Book</p1></br></br><p1>ISBN:  </p1><p1 style = "font-weight: normal"><p1 id="demo"></p1></p1></br></br><p1 style = "font-weight: normal"><i><p1 id="demo4"></p1></i></p1><center></div></center></th>
+    <th rowspan="4"><p1>About This Book</p1></br><p id="imagecover"></p><p1>ISBN:  </p1><p1 style = "font-weight: normal"><p1 id="demo"></p1></p1></br></br><p1 style = "font-weight: normal"><i><p1 id="demo4"></p1></i></p1><center></div></center></th>
     <td style="width:50px"><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Open_Library_tight_logo.svg/1065px-Open_Library_tight_logo.svg.png" width="50" height="31"></center></td>
     <td style="width:54%"><p1><b>Borrow online from OpenLibrary</b></br><p1 id="demo3"></p1></p1></td>
   </tr>
