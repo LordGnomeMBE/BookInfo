@@ -5,7 +5,7 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
-- <b>V2.4.0</b> <i>Integrates OpenLibrary Covers Library</i>
+- <b>V2.4.0</b> <i>Integrated OpenLibrary Covers Library</i>
    - added minor code to implement cover image of book.
 - \+ 1 minor change
 - <b>V2.3.0</b> <i>Previous changes go live - this update brings together all the previous gradual changes to have a new design, name, and input methods!</i> </br>
@@ -28,7 +28,7 @@ A - I'd love your help! Whether it's by designing a new UI, icons, a logo, or so
 # Contact Me
 Contact me on Reddit (u/LordGnomeMBE) or by email lordgnomembe@gmail.com!
 # Full Changelog
-- <b>V2.4.0</b> <i>Integrates OpenLibrary Covers Library</i>
+- <b>V2.4.0</b> <i>Integrated OpenLibrary Covers Library</i>
    - added minor code to implement cover image of book.
 - <b>V2.3.1</b> <i>Minor output URL tweak</i>
    - changed eBay output to default to 'Lowest Price + P&P'.
