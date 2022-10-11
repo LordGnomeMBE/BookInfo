@@ -95,15 +95,15 @@ var bpl = "https://" + g;
 var h = "<a href='" + bpl + "'>" + g + "</a>";
 document.getElementById("demo2").innerHTML = h;
 var k = "openlibrary.org/isbn/" + f;
-var j = "<a href='https://" + k + "'>" + k + "</a>";
+var j = "<a href='https://" + k + "' target="_blank">" + k + "</a>";
 document.getElementById("demo3").innerHTML = j;
-var oplib = "<a href='https://" + k + "'><i>View full details on OpenLibrary.org</i></a>";
+var oplib = "<a href='https://" + k + "' target="_blank"><i>View full details on OpenLibrary.org</i></a>";
 document.getElementById("demo4").innerHTML = oplib;
 var p = "ebay.co.uk/sch/" + f;
 var ebl = p + "&_sop=15";
-var ebaylink = "<a href='https://" + ebl + "'>" + p + "</a>";
+var ebaylink = "<a href='https://" + ebl + "' target="_blank">" + p + "</a>";
 document.getElementById("demo5").innerHTML = ebaylink
-var imagelink = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' />";
+var imagelink = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' target="_blank"/>";
 document.getElementById("imagecover").innerHTML = imagelink;
 }
 </script>
