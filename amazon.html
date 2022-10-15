@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/LordGnomeMBE/BookInfo/main/favicon.png">
     <title>BookInfo by Lord Gnome - Searching by Amazon Link | Find the best place to buy your books!</title>
+</head>
 <style>
     .button3 {
   background-color: white;
@@ -17,6 +18,48 @@
   cursor: pointer;
   border-radius: 30px;
 }
+th, td {
+  border: 3px solid white;
+  padding: 5px;
+}
+table {
+  border-spacing: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.collapsible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  padding-left: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #404040;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+}
+.mtopDiv {
+  text-align: center;
+}
+p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: orange;
+}
 .button2 {
   background-color: black;
   border: none;
@@ -30,31 +73,12 @@
   cursor: pointer;
   border-radius: 30px;
 }
-th, td {
-  border: 3px solid black;
-  padding: 5px;
-}
-table {
-  border-spacing: 7px;
-}
-p1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-p2 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: orange;
-}
-.mtopDiv {
-  text-align: center;
-}
 </style>
-</head>
 <body>
-<p1 style="font-size:18px"style="font-family:verdana;"><label id="text"style="color:black;"><center>
+<p1 style="font-size:18px"><label id="text"style="color:black;"><center>
 By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you like this site, please share it! | <a href="https://github.com/LordGnomeMBE/BookInfo">View the site source</a></a></p></center></label></p1>
 
-<hr style="height:2px;border-width:0;color:black;background-color:black">
-</br>
+<hr style="height:2px;border-width:0;color:black;background-color:black"></br>
 
 <div class="mtopDiv">
 <p1 style="font-size:20px"><b><i>SEARCHING BY </i></b></p1><p2 style="font-size:20px"><b><i>AMAZON </i></b></p2><p1 style="font-size:20px"><b><i>LINK</i></b></p1></br>
@@ -65,15 +89,70 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
     <a href="https://lordgnomembe.github.io/BookInfo/amazon.html" class="button2"><p1>Search by Amazon Link</p1></a>
 </center>
 </br>
-<hr style="height:2px;border-width:0;color:black;background-color:black"></br>
+
+<hr style="height:2px;border-width:0;color:black;background-color:black">
+
 <center>
 <button style="font-size:20px" class="button3" onclick="firstFunction()">Convert a URL</button></br></br>
+</center>
+<center>
+<table style="width:80%">
+  <tr>
+    <th style="width:45%">Your URL<hr style="height:2px;border-width:0;color:black;background-color:black"><i><p style = "font-weight: normal"id="inputform"></p></i></p>
+</th>
+  </tr>
+</table>
+</center>
 
-<p1><i>Please note that not all links will work all the time as book avaliability changes regularly.</i></p1>
-</br></br>
+<center>
+<table style="width:80%">
+  <tr>
+    <th style="width:45%">About This Book<hr style="height:2px;border-width:0;color:black;background-color:black"><!--Charlie and the Chocolate Factory</br></br>--><p id="BookCoverImageMed"></p><!--</br>ISBN10: 12345</br>ISBN13: 12345--><p id="demo"></p>
+
+</th>
+    <th>Get This Book<hr style="height:2px;border-width:0;color:black;background-color:black"><button type="button" class="collapsible">Information &#8594;</button>
+<div class="content">
+  <p style = "font-weight: normal"><p id="OpenLibraryLink"></p><p id="GoodreadsLink"></p><p id="GoogleBooksLink"></p></p>
+</div>
+
+<button type="button" class="collapsible">Borrow & Read &#8594;</button>
+<div class="content">
+  <p style = "font-weight: normal"><p id="OpenLibraryBorrowLink"></p><p id="UKLibraryFinder"></p></p>
+</div>
+
+<button type="button" class="collapsible">Bookshops &#8594;</button>
+<div class="content">
+  <p style = "font-weight: normal"><!--<a href="#">Seacrh on bookshop.org &#8594;</a>--><p id="WaterstonesLink"></p><p id="BWLSlink"></p></p>
+</div>
+
+<button type="button" class="collapsible">Buy Online &#8594;</button>
+<div class="content">
+   <p style = "font-weight: normal"><p id="ebaylink"></p><p id="woblink"></p><p id="abebkslnk"><p id="amznlnk"></p><p style = "font-weight: normal"><p style = "font-weight: normal;color: red"><i>WARNING: This will link to Amazon. You can use it, but I'd advise against it as Amazon is bad for <a href="https://ilsr.org/fact-sheet-how-breaking-up-amazon-can-empower-small-business/">small businesses</a>, <a href="https://www.psychologytoday.com/gb/blog/greening-the-media/202105/how-amazon-affects-the-environment">the planet</a>, and <a href="https://www.theguardian.com/technology/2020/feb/05/amazon-workers-protest-unsafe-grueling-conditions-warehouse">their employees</a>.</i></p>	</p></p>
+</div>
+
+<button type="button" class="collapsible">Price Comparison Sites &#8594;</button>
+<div class="content">
+    <p style = "font-weight: normal"><p id="bookpricelinks"></p><p style = "font-weight: normal"><i>Please note that this site has not renewed its SSL certificate.</i></p><p id="isbnsearchlinks"></p></p>
+</div></th>
+  </tr>
+</table>
 </center>
 
 <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 function firstFunction() {
 const input = prompt("Please enter an amazon link:");
 let inputlink;
@@ -84,54 +163,42 @@ if (input.includes("https://")) {
 } else {
   inputlink = "<a href=https://" + input + "/ref=reference><i>" + input + "</i></a>";
 }
-var a = inputlink;
-document.getElementById("inputform").innerHTML = a;
-var s = input + "ref=12345";
+var userurl = inputlink;
+document.getElementById("inputform").innerHTML = userurl;
+var s = input + "ref=reference";
 s = s.substring(0, s.indexOf('ref='));
 var f = s.replace(/[\D]/g, '');
-document.getElementById("demo").innerHTML = f;
-var g = "booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f;
-var bpl = "https://" + g;
-var h = "<a href='" + bpl + "'>" + g + "</a>";
-document.getElementById("demo2").innerHTML = h;
-var k = "openlibrary.org/isbn/" + f;
-var j = "<a href='https://" + k + "' target="_blank">" + k + "</a>";
-document.getElementById("demo3").innerHTML = j;
-var oplib = "<a href='https://" + k + "' target="_blank"><i>View full details on OpenLibrary.org</i></a>";
-document.getElementById("demo4").innerHTML = oplib;
-var p = "ebay.co.uk/sch/" + f;
-var ebl = p + "&_sop=15";
-var ebaylink = "<a href='https://" + ebl + "' target="_blank">" + p + "</a>";
-document.getElementById("demo5").innerHTML = ebaylink
-var imagelink = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' target="_blank"/>";
-document.getElementById("imagecover").innerHTML = imagelink;
+document.getElementById("demo").innerHTML = "<p style = 'font-weight: normal'><b>ISBN: </b>" + f + "</p>";
+var OpLib = "openlibrary.org/isbn/" + f;
+document.getElementById("OpenLibraryLink").innerHTML = "<a href=https://" + OpLib + ">View on OpenLibrary &#8594;</a>";
+var Goodreads = "www.goodreads.com/search?q=" + f;
+document.getElementById("GoodreadsLink").innerHTML = "<a href=https://" + Goodreads + ">View on Goodreads &#8594;</a>";
+var Google = "google.com/search?tbm=bks&q=" + f;
+document.getElementById("GoogleBooksLink").innerHTML = "<a href=https://" + Google + ">View on Google Books &#8594;</a>";
+var OpLibBorr = OpLib
+document.getElementById("OpenLibraryBorrowLink").innerHTML = "<a href=https://" + OpLibBorr + ">Borrow from OpenLibrary online &#8594;</a>";
+var UKLibFind = "<a href='https://www.gov.uk/local-library-services'><b>(UK)</b> Find your Local Library &#8594;</a>";
+document.getElementById("UKLibraryFinder").innerHTML = UKLibFind;
+var waterstones = "waterstones.com/books/search/term/" + f;
+document.getElementById("WaterstonesLink").innerHTML = "<a href=https://" + waterstones + ">Search on Waterstones &#8594;</a>";
+var BWLS = "blackwells.co.uk/bookshop/search/?keyword=" + f;
+document.getElementById("BWLSlink").innerHTML = "<a href=https://" + BWLS + ">Search on Blackwells &#8594;</a>";
+var ebay = "ebay.co.uk/sch/" + f + "&_sop=15";
+document.getElementById("ebaylink").innerHTML = "<a href=https://" + ebay + ">Search on eBay &#8594;</a>";
+var wob = "wob.com/en-gb/category/all?search=" + f;
+document.getElementById("woblink").innerHTML = "<a href=https://" + wob + ">Search on WorldOfBooks &#8594;</a>";
+var abk = "abebooks.co.uk/servlet/SearchResults?kn=" + f;
+document.getElementById("abebkslnk").innerHTML = "<a href=https://" + abk + ">Search on AbeBooks &#8594;</a>";
+var amplf = "amazon.co.uk/dp/" + f;
+document.getElementById("amznlnk").innerHTML = "<a href=https://" + amplf + ">Search on Amazon &#8594;</a>";
+var bkprc = "booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f;
+document.getElementById("bookpricelinks").innerHTML = "<a href=https://" + bkprc + ">View on booksprice.co.uk &#8594;</a>";
+var isbnsrch = "isbnsearch.org/isbn/" + f;
+document.getElementById("isbnsearchlinks").innerHTML = "<a href=https://" + isbnsrch + ">View on ISBNsearch.org &#8594;</a>";
+var coverimgfromisbn = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' />";
+document.getElementById("BookCoverImageMed").innerHTML = coverimgfromisbn;
 }
 </script>
 
-<center>
-<table style="width:80%">
-  <tr>
-    <th rowspan="4"><p1>About This Book</p1></br><p id="imagecover"></p><p1>ISBN:  </p1><p1 style = "font-weight: normal"><p1 id="demo"></p1></p1></br></br><p1>Original URL: </p1><p1 style = "font-weight: normal"><p1 id="inputform"></p1></p1></br></br><p1 style = "font-weight: normal"><i><p1 id="demo4"></p1></i></p1><center></div></center></th>
-    <td style="width:50px"><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Open_Library_tight_logo.svg/1065px-Open_Library_tight_logo.svg.png" width="50" height="31"></center></td>
-    <td style="width:54%"><p1><b>Borrow online from OpenLibrary</b></br><p1 id="demo3">OpenLibrary link will appear here</p1></p1></td>
-  </tr>
-  <tr>
-    <td><center><img src="https://simg.nicepng.com/png/small/389-3892236_ebay-logo-new-ebay-by-todd-alexander.png" width="40" height="40"></center></td>
-    <td><p1><b>Buy on eBay</b></br><p1 id="demo5">eBay link will appear here</p1></p1></td>
-  </tr>
-  <tr>
-    <td><center><img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHpFw4SQR0ATQ/company-logo_200_200/0/1599886662996?e=2147483647&v=beta&t=__Vh8lL_YPesfcun993ha_g1TBf9vJ-1RfPAZ-L9IQ4" width="40" height="40"></center></td>
-    <td><p1><b>Buy on bookshop.org</b></br><a href="https://bookshop.org">bookshop.org</a></p1></td>
-  </tr>
-      <td><center><img src="https://raw.githubusercontent.com/LordGnomeMBE/BookInfo/main/index.png" width="50" height="40"></center></td>
-    <td><p1><b>Compare prices on Booksprice.co.uk</b></br><p1 style="color:red;"><i>Please note this site has not renewed its SSL certificate.</i></p1></br><p1 id="demo2">booksprice.co.uk link will appear here</p1></p1></td>
-  </tr>
-</table>
-</center>
-</br>
-<p1><center>If you have any ideas or feedback, please <a href="https://reddit.com/u/lordgnomembe">contact me</a>.</center></p1>
-</br>
-<p1><center><i>All logos are used for illustration purposes. I am not responsible for the contents of external sites. </br></br>Please be aware that sometimes links will fail as no books are avaliable at that current time - if this is the case, please try a different source or try again later. Furthermore, a minority of amazon links will fail as there is not enough information in the URL to determine the ISBN number.</i></center></p1>
-</br>
 </body>
 </html>
