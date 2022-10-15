@@ -5,6 +5,8 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
+- <b>V2.5.0</b> <i>major UI overhaul. Some pages will still run old UI until changes are fully rolled out.</i>
+   - changed whole UI.
 - \+ 3 minor changes
 - <b>V2.4.0</b> <i>Integrated OpenLibrary Covers Library</i>
    - added minor code to implement cover image of book.
