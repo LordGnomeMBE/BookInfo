@@ -5,7 +5,7 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
-- \+ 1 minor change
+- \+ 2 minor changes
 - <b>V2.5.0</b> <i>major UI overhaul. Some pages will still run old UI until changes are fully rolled out.</i>
    - changed whole UI.
 - \+ 3 minor changes
@@ -32,6 +32,8 @@ A - I'd love your help! Whether it's by designing a new UI, icons, a logo, or so
 # Contact Me
 Contact me on Reddit (u/LordGnomeMBE) or by email lordgnomembe@gmail.com!
 # Full Changelog
+- <b>V2.5.2</b> <i>Minor wording change.</i>
+   - changed dropdown heading from 'Information' to 'Further Information'.
 - <b>V2.5.1</b> <i>tweaked alignment.</i>
    - moved alignment for better readability.
 - <b>V2.5.0</b> <i>major UI overhaul. Some pages will still run old UI until changes are fully rolled out.</i>
@@ -62,5 +64,5 @@ Contact me on Reddit (u/LordGnomeMBE) or by email lordgnomembe@gmail.com!
    - Created new separate page to convert ISBNs
 - <b>V2.0.0</b> <i>The start of working towards a big new update!</i></br>
    - Created a new separate page to convert ISBNs
-<i>Changelog before V2.0.0 does not exist as records were not kept before this point.</i>
+<i>Changelog before V2.0.0 does not exist as I did not keep accurate records before this point.</i>
 <i>Please refer to detailed GitHub changelog for full changes in detail as they were committed.</i>
