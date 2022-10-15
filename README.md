@@ -5,6 +5,7 @@ Input an Amazon Link or ISBN and get links to:
 - more information about the book
 - and various places to buy it.
 # Changelog
+- \+ 1 minor change
 - <b>V2.5.0</b> <i>major UI overhaul. Some pages will still run old UI until changes are fully rolled out.</i>
    - changed whole UI.
 - \+ 3 minor changes
@@ -31,6 +32,10 @@ A - I'd love your help! Whether it's by designing a new UI, icons, a logo, or so
 # Contact Me
 Contact me on Reddit (u/LordGnomeMBE) or by email lordgnomembe@gmail.com!
 # Full Changelog
+- <b>V2.5.1</b> <i>tweaked alignment.</i>
+   - moved alignment for better readability.
+- <b>V2.5.0</b> <i>major UI overhaul. Some pages will still run old UI until changes are fully rolled out.</i>
+   - changed whole UI.
 - <b>V2.4.2</b> <i>Added placeholder output text</i>
    - Tweaked button CSS on index.html
    - Tweaked button CSS on amazon.html
