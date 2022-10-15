@@ -45,7 +45,21 @@ p1 {
   outline: none;
   font-size: 15px;
 }
-
+.collapsibletwo {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  padding-left: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsibletwo:hover {
+  background-color: #404040;
+}
 .active, .collapsible:hover {
   background-color: #404040;
 }
@@ -99,7 +113,7 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 <center>
 <table style="width:80%">
   <tr>
-    <th style="width:45%">Your URL<hr style="height:2px;border-width:0;color:black;background-color:black"><i><p style = "font-weight: normal"id="inputform"><i>The URL you submit will appear here.</i></p></i></p>
+    <th style="width:45%">Your URL<hr style="height:2px;border-width:0;color:black;background-color:black"><p style = "font-weight: normal"id="inputform"><i>The URL you submit will appear here.</i></p><p style = "font-weight: normal"id="demo"><i>The ISBN extracted from your URL will appear here.</i></p></p>
 </th>
   </tr>
 </table>
@@ -108,8 +122,7 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 <center>
 <table style="width:80%">
   <tr>
-    <th style="width:45%">About This Book<hr style="height:2px;border-width:0;color:black;background-color:black"><!--Charlie and the Chocolate Factory</br></br>--><p id="BookCoverImageMed"><i style = "font-weight: normal">Book information will appear here.</i></p><!--</br>ISBN10: 12345</br>ISBN13: 12345--><p id="demo"></p>
-
+    <th style="width:45%">About This Book<hr style="height:2px;border-width:0;color:black;background-color:black"><p id="booktitle"></p><p id="bookpublished"></p><p id="BookCoverImageMed"><i style = "font-weight: normal">Book information will appear here.</i></p><p id="ISBN13"></p><p id="Bookthemesfromisbn"></p><p id="numofpages">
 </th>
     <th>Get This Book<hr style="height:2px;border-width:0;color:black;background-color:black"><button type="button" class="collapsible">Further Information &#8594;</button>
 <div class="content">
@@ -123,7 +136,7 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 
 <button type="button" class="collapsible">Bookshops &#8594;</button>
 <div class="content">
-  <p style = "font-weight: normal"><!--<a href="#">Seacrh on bookshop.org &#8594;</a>--><p id="WaterstonesLink"><i style = "font-weight: normal">Waterstones link will appear here.</i></p><p id="BWLSlink"><i style = "font-weight: normal">Blackwells link will appear here.</i></p></p>
+  <p style = "font-weight: normal"><p id="BookShopOrgLink"><i style = "font-weight: normal">Bookshop.org link will appear here.</i></p><p style="font-weight: normal"><i style = "color:darkblue">Unfortunately, due to the way bookshop.org's search function works, I can't link directly to the book. Working out how to get round this is on the rooadmap.</i></p><!--<p id="bookshoporglinks"><i style = "font-weight: normal">bookshop.org link will appear here.</i></p>--><p id="WaterstonesLink"><i style = "font-weight: normal">Waterstones link will appear here.</i></p><p id="BWLSlink"><i style = "font-weight: normal">Blackwells link will appear here.</i></p></p>
 </div>
 
 <button type="button" class="collapsible">Buy Online &#8594;</button>
@@ -133,7 +146,7 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 
 <button type="button" class="collapsible">Price Comparison Sites &#8594;</button>
 <div class="content">
-    <p style = "font-weight: normal"><p id="bookpricelinks"><i style = "font-weight: normal">bookprice.co.uk link will appear here.</i></p><p style = "font-weight: normal"><i>Please note that this site has not renewed its SSL certificate.</i></p><p id="isbnsearchlinks"><i style = "font-weight: normal">ISBNsearch.org link will appear here.</i></p></p>
+    <p style = "font-weight: normal"><p id="bookpricelinks"><i style = "font-weight: normal">bookprice.co.uk link will appear here.</i></p><p style = "font-weight: normal"><i style="color:darkblue">Please note that this site has not renewed its SSL certificate, so it will appear as 'not secure'.</i></p><p id="isbnsearchlinks"><i style = "font-weight: normal">ISBNsearch.org link will appear here.</i></p></p>
 </div></th>
   </tr>
 </table>
@@ -169,7 +182,7 @@ document.getElementById("inputform").innerHTML = userurl;
 var s = input + "ref=reference";
 s = s.substring(0, s.indexOf('ref='));
 var f = s.replace(/[\D]/g, '');
-document.getElementById("demo").innerHTML = "<p style = 'font-weight: normal'><b>ISBN: </b>" + f + "</p>";
+document.getElementById("demo").innerHTML = "<p style = 'font-weight: normal'><b>ISBN from your URL: </b>" + f + "</p>";
 var OpLib = "openlibrary.org/isbn/" + f;
 document.getElementById("OpenLibraryLink").innerHTML = "<a href=https://" + OpLib + ">View on OpenLibrary &#8594;</a>";
 var Goodreads = "www.goodreads.com/search?q=" + f;
@@ -198,6 +211,22 @@ var isbnsrch = "isbnsearch.org/isbn/" + f;
 document.getElementById("isbnsearchlinks").innerHTML = "<a href=https://" + isbnsrch + ">View on ISBNsearch.org &#8594;</a>";
 var coverimgfromisbn = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' />";
 document.getElementById("BookCoverImageMed").innerHTML = coverimgfromisbn;
+var bkshporg = "<a href='https://bookshop.org'>Visit bookshop.org &#8594;</a>";
+document.getElementById("BookShopOrgLink").innerHTML = bkshporg;
+var oplibisbn = f;
+var urlforfurtherinfo = "https://openlibrary.org/isbn/" + oplibisbn + ".json";
+getText(urlforfurtherinfo);
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  const obj = JSON.parse(myText);
+  document.getElementById("booktitle").innerHTML = obj.full_title;
+  document.getElementById("bookpublished").innerHTML = "<p style='font-weight: normal'><i>This edition was published by " + obj.publishers + " in " + obj.publish_date + "</i></p>";
+  document.getElementById("ISBN13").innerHTML = "<p style='font-weight: normal'><b>ISBN 13</b>: " + obj.isbn_13 + "</p>";
+  document.getElementById("Bookthemesfromisbn").innerHTML = "<p style='font-weight: normal'><b>Themes</b>: " + obj.subjects + "</p>";
+    document.getElementById("numofpages").innerHTML = "<p style='font-weight: normal'><b>Pages</b>: " + obj.pagination + "</p>";
+}
 }
 </script>
 <center><p><i>Please report any bugs, give suggestions, and provide feedback at <a href="https://reddit.com/r/LordGnomeMBE">r/LordGnomeMBE</a>.</i></p></center>
