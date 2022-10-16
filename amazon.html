@@ -18,6 +18,18 @@
   cursor: pointer;
   border-radius: 30px;
 }
+    .button4 {
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+  padding: 5px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+}
 th, td {
   border: 3px solid white;
   padding: 5px;
@@ -147,11 +159,20 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 <button type="button" class="collapsible">Price Comparison Sites &#8594;</button>
 <div class="content">
     <p style = "font-weight: normal"><p id="bookpricelinks"><i style = "font-weight: normal">bookprice.co.uk link will appear here.</i></p><p style = "font-weight: normal"><i style="color:darkblue">Please note that this site has not renewed its SSL certificate, so it will appear as 'not secure'.</i></p><p id="isbnsearchlinks"><i style = "font-weight: normal">ISBNsearch.org link will appear here.</i></p></p>
-</div></th>
+</div></br></br><button onclick="window.location.href='https://lordgnomembe.github.io/BookInfo/amazon.html#Troubleshooting';" style="font-size:13px" class="button4" >Links not working?</button></th>
   </tr>
 </table>
 </center>
-
+<center>
+<table style="width:80%">
+  <tr>
+    <th style="width:45%">Troubleshooting<a id="Troubleshooting"><hr style="height:2px;border-width:0;color:black;background-color:black"><b><i>If the links are not working (you keep getting error pages) &#8594;</i></b><p style = "font-weight: normal">Unfortunately, a small number of Amazon links don't work as there is not sufficient information in the URL to determine the Book's information. If the output links don't work, you'll have to try a different method. </p><p style = "font-weight: normal">1. Go to the top of the page and click the 'Search by ISBN' button.</p><p style = "font-weight: normal">2. Go to your Amazon page, and go to the book info section and scroll along until you get to the ISBNs.</p><p style = "font-weight: normal">3. Copy either the ISBN 10 or the ISBN 13.</p><p style = "font-weight: normal">4. Go back to BookInfo and enter the ISBN.</p>
+    <b><i>Why doesn't my link work? &#8594;</i></b>
+    <p style = "font-weight: normal">Some links from Amazon only point to Amazon product numbers, rather than book information. Unfortunately, my code currently can't  get enough information from these links. Working on this is on the roadmap. You can tell in advance if this will be the case, as these URLs don't contain the /dp/ part.
+</th>
+  </tr>
+</table>
+</center>
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -171,11 +192,11 @@ function firstFunction() {
 const input = prompt("Please enter an amazon link:");
 let inputlink;
 if (input.includes("https://")) {
-  inputlink = "<a href=" + input + "><i>" + input + "</i></a>";
+  inputlink = "<a href='" + input + "' target='_blank'><i>" + input + "</i></a>";
 } else if (input.includes("ref=")) {
-  inputlink = "<a href=https://" + input + "><i>" + input + "</i></a>";
+  inputlink = "<a href='https://" + input + "' target='_blank'><i>" + input + "</i></a>";
 } else {
-  inputlink = "<a href=https://" + input + "/ref=reference><i>" + input + "</i></a>";
+  inputlink = "<a href='https://" + input + "/ref=reference' target='_blank'><i>" + input + "</i></a>";
 }
 var userurl = inputlink;
 document.getElementById("inputform").innerHTML = userurl;
@@ -184,34 +205,34 @@ s = s.substring(0, s.indexOf('ref='));
 var f = s.replace(/[\D]/g, '');
 document.getElementById("demo").innerHTML = "<p style = 'font-weight: normal'><b>ISBN from your URL: </b>" + f + "</p>";
 var OpLib = "openlibrary.org/isbn/" + f;
-document.getElementById("OpenLibraryLink").innerHTML = "<a href=https://" + OpLib + ">View on OpenLibrary &#8594;</a>";
+document.getElementById("OpenLibraryLink").innerHTML = "<a href='https://" + OpLib + "' target='_blank'>View on OpenLibrary &#8594;</a>";
 var Goodreads = "www.goodreads.com/search?q=" + f;
-document.getElementById("GoodreadsLink").innerHTML = "<a href=https://" + Goodreads + ">View on Goodreads &#8594;</a>";
+document.getElementById("GoodreadsLink").innerHTML = "<a href='https://" + Goodreads + "' target='_blank'>View on Goodreads &#8594;</a>";
 var Google = "google.com/search?tbm=bks&q=" + f;
-document.getElementById("GoogleBooksLink").innerHTML = "<a href=https://" + Google + ">View on Google Books &#8594;</a>";
+document.getElementById("GoogleBooksLink").innerHTML = "<a href='https://" + Google + "' target='_blank'>View on Google Books &#8594;</a>";
 var OpLibBorr = OpLib
-document.getElementById("OpenLibraryBorrowLink").innerHTML = "<a href=https://" + OpLibBorr + ">Borrow from OpenLibrary online &#8594;</a>";
-var UKLibFind = "<a href='https://www.gov.uk/local-library-services'><b>(UK)</b> Find your Local Library &#8594;</a>";
+document.getElementById("OpenLibraryBorrowLink").innerHTML = "<a href='https://" + OpLibBorr + "' target='_blank'>Borrow from OpenLibrary online &#8594;</a>";
+var UKLibFind = "<a href='https://www.gov.uk/local-library-services' target='_blank'><b>(UK)</b> Find your Local Library &#8594;</a>";
 document.getElementById("UKLibraryFinder").innerHTML = UKLibFind;
 var waterstones = "waterstones.com/books/search/term/" + f;
-document.getElementById("WaterstonesLink").innerHTML = "<a href=https://" + waterstones + ">Search on Waterstones &#8594;</a>";
+document.getElementById("WaterstonesLink").innerHTML = "<a href='https://" + waterstones + "' target='_blank'>Search on Waterstones &#8594;</a>";
 var BWLS = "blackwells.co.uk/bookshop/search/?keyword=" + f;
-document.getElementById("BWLSlink").innerHTML = "<a href=https://" + BWLS + ">Search on Blackwells &#8594;</a>";
+document.getElementById("BWLSlink").innerHTML = "<a href='https://" + BWLS + "' target='_blank'>Search on Blackwells &#8594;</a>";
 var ebay = "ebay.co.uk/sch/" + f + "&_sop=15";
-document.getElementById("ebaylink").innerHTML = "<a href=https://" + ebay + ">Search on eBay &#8594;</a>";
+document.getElementById("ebaylink").innerHTML = "<a href='https://" + ebay + "' target='_blank'>Search on eBay &#8594;</a>";
 var wob = "wob.com/en-gb/category/all?search=" + f;
-document.getElementById("woblink").innerHTML = "<a href=https://" + wob + ">Search on WorldOfBooks &#8594;</a>";
+document.getElementById("woblink").innerHTML = "<a href='https://" + wob + "' target='_blank'>Search on WorldOfBooks &#8594;</a>";
 var abk = "abebooks.co.uk/servlet/SearchResults?kn=" + f;
-document.getElementById("abebkslnk").innerHTML = "<a href=https://" + abk + ">Search on AbeBooks &#8594;</a>";
+document.getElementById("abebkslnk").innerHTML = "<a href='https://" + abk + "' target='_blank'>Search on AbeBooks &#8594;</a>";
 var amplf = "amazon.co.uk/dp/" + f;
-document.getElementById("amznlnk").innerHTML = "<a href=https://" + amplf + ">Search on Amazon &#8594;</a>";
+document.getElementById("amznlnk").innerHTML = "<a href='https://" + amplf + "' target='_blank'>Search on Amazon &#8594;</a>";
 var bkprc = "booksprice.co.uk/comparePrice.do?l=y&searchType=compare&inputData=" + f;
-document.getElementById("bookpricelinks").innerHTML = "<a href=https://" + bkprc + ">View on booksprice.co.uk &#8594;</a>";
+document.getElementById("bookpricelinks").innerHTML = "<a href='https://" + bkprc + "' target='_blank'>View on booksprice.co.uk &#8594;</a>";
 var isbnsrch = "isbnsearch.org/isbn/" + f;
-document.getElementById("isbnsearchlinks").innerHTML = "<a href=https://" + isbnsrch + ">View on ISBNsearch.org &#8594;</a>";
+document.getElementById("isbnsearchlinks").innerHTML = "<a href='https://" + isbnsrch + "' target='_blank'>View on ISBNsearch.org &#8594;</a>";
 var coverimgfromisbn = "<img src='https://covers.openlibrary.org/b/isbn/" + f + "-M.jpg?default=false' />";
 document.getElementById("BookCoverImageMed").innerHTML = coverimgfromisbn;
-var bkshporg = "<a href='https://bookshop.org'>Visit bookshop.org &#8594;</a>";
+var bkshporg = "<a href='https://bookshop.org' target='_blank'>Visit bookshop.org &#8594;</a>";
 document.getElementById("BookShopOrgLink").innerHTML = bkshporg;
 var oplibisbn = f;
 var urlforfurtherinfo = "https://openlibrary.org/isbn/" + oplibisbn + ".json";
