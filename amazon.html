@@ -153,7 +153,7 @@ By <a href="https://www.reddit.com/user/lordgnomembe">Lord Gnome</a> | If you li
 
 <button type="button" class="collapsible">Buy Online &#8594;</button>
 <div class="content">
-   <p style = "font-weight: normal"><p id="ebaylink"><i style = "font-weight: normal">eBay link will appear here.</i></p><p id="woblink"><i style = "font-weight: normal">WorldOfBooks link will appear here.</i></p><p id="abebkslnk"><p id="amznlnk"><i style = "font-weight: normal">Amazon link will appear here.</i></p><p style = "font-weight: normal"><p style = "font-weight: normal;color: red"><i>WARNING: This will link to Amazon. You can use it, but I'd advise against it as Amazon is bad for <a href="https://ilsr.org/fact-sheet-how-breaking-up-amazon-can-empower-small-business/">small businesses</a>, <a href="https://www.psychologytoday.com/gb/blog/greening-the-media/202105/how-amazon-affects-the-environment">the planet</a>, and <a href="https://www.theguardian.com/technology/2020/feb/05/amazon-workers-protest-unsafe-grueling-conditions-warehouse">their employees</a>.</i></p>	</p></p>
+   <p style = "font-weight: normal"><p id="ebaylink"><i style = "font-weight: normal">eBay link will appear here.</i></p><p id="woblink"><i style = "font-weight: normal">WorldOfBooks link will appear here.</i></p><p id="abebkslnk"><p id="HiveBooksLink"><i style = "font-weight: normal">Hive Books link will appear here.</i></p><p id="amznlnk"><i style = "font-weight: normal">Amazon link will appear here.</i></p><p style = "font-weight: normal"><p style = "font-weight: normal;color: red"><i>WARNING: This will link to Amazon. You can use it, but I'd advise against it as Amazon is bad for <a href="https://ilsr.org/fact-sheet-how-breaking-up-amazon-can-empower-small-business/">small businesses</a>, <a href="https://www.psychologytoday.com/gb/blog/greening-the-media/202105/how-amazon-affects-the-environment">the planet</a>, and <a href="https://www.theguardian.com/technology/2020/feb/05/amazon-workers-protest-unsafe-grueling-conditions-warehouse">their employees</a>.</i></p>	</p></p>
 </div>
 
 <button type="button" class="collapsible">Price Comparison Sites &#8594;</button>
@@ -234,6 +234,8 @@ var coverimgfromisbn = "<img src='https://covers.openlibrary.org/b/isbn/" + f + 
 document.getElementById("BookCoverImageMed").innerHTML = coverimgfromisbn;
 var bkshporg = "<a href='https://bookshop.org' target='_blank'>Visit bookshop.org &#8594;</a>";
 document.getElementById("BookShopOrgLink").innerHTML = bkshporg;
+var hivebook = "<a href='https://www.hive.co.uk/books' target='_blank'>Visit Hive Books &#8594;</a>";
+document.getElementById("HiveBooksLink").innerHTML = hivebook;
 var oplibisbn = f;
 var urlforfurtherinfo = "https://openlibrary.org/isbn/" + oplibisbn + ".json";
 getText(urlforfurtherinfo);
