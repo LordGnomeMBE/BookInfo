@@ -25,8 +25,6 @@ Input an Amazon Link or ISBN and get links to:
 # FAQs
 - <b>Q</b> What does this site do?</br>
 A - This site aims to make it easy to enjoy books, and get a good price. It gives an output from (currently) an ISBN or Amazon Link that gives links to various online sites.
-- <b>Q</b> Why does it not give Amazon links?</br>
-A - When I created this site for myself, I did not want to use Amazon as I have ethical issues with their business model. Therefore I did not include it. If enough people want it to be added, I will - please contact me (see below) and I may add it.
 - <b>Q</b> How can I help?</br>
 A - I'd love your help! Whether it's by designing a new UI, icons, a logo, or something; rewriting a better version of the code (cleaning it up etc.) and submitting it; Suggesting extra sites to add to the output; Suggesting new input methods; or whatever you have skills in, please contact me!
 # Contact Me
